@@ -1,3 +1,4 @@
+https://docs.python.org/
 repl.it
 
 # работа с пременными
@@ -107,5 +108,30 @@ r_sum = r_plus(2, 3)
 # непозиционное
 r_sum = r_plus(b=2, a=4)
 
+
+def sayHello(name, age):
+    # return "Привет name, тебе age лет" #Привет name, тебе age лет
+    return f"Привет {name}, тебе {age} лет"
+    # f - форматирование, формат
+
+hello = sayHello('Антон', '28')
+print(hello)
+#практическое 7 операций 
+
+
+
+
+
+
+a, b = map(int, input().split())
+
+def plus(a, b):
+    return a + b
+
+def pr(a, b):
+    return a + b
+
+print(plus(a, b))
+print(pr(a, b))
 
 
