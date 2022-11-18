@@ -1,0 +1,88 @@
+repl.it
+
+# работа с пременными
+a_string  = "Privet"
+a_integer = 3
+a_float   = 3.75
+a_boolean = True
+a_none    = None #null
+
+print(type(a_float))
+"""
+	# списки (Lists)
+	# Упорядоенные списки данных list и tuple
+	# список list
+	# https://docs.python.org/3/library/
+
+days = "mon, tue, wed, thu, fri, sat, sun"
+print(days) #     mon, tue, wed, thu, fri, sat, sun
+	# упорядлченный список class 'list'
+	# для list возможны common and mutable операции
+days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
+print(days)
+print(type(days))       # <class 'list'>
+print("mon" in days)    # True
+print(days[4])          # fri # нумерация с 0
+print(len(days))        # 7
+""" """
+days = ["mon", "tue", "wed", "thu", "fri"]
+print(days)         # ['mon', 'tue', 'wed', 'thu', 'fri']
+
+#mutable операции что-то изменяют, unmutable не изменяемые
+days.append('sat')
+print(days)         # ['mon', 'tue', 'wed', 'thu', 'fri', 'sat']
+days.reverse()
+print(days)         # ['sat', 'fri', 'thu', 'wed', 'tue', 'mon']
+"""
+# тема 3.1
+# не изменяемые упорядоченные списки - tuple
+# для tuple только common операции
+# days = [list]
+# days = (tuple)
+days = ("mon", "tue", "wed", "thu", "fri", "sat", "sun")
+# пример для не изменяемых упорядоченных списков(tuple) -
+# дни недели их 7, восьмого дня не предвидется
+print(type(days))  # <class 'tuple'>
+
+# тема 3.2
+# Словари не упорядоченный список
+#           DICT
+Anton = {
+   # ключ : значение
+    'name': 'Anton',
+    'age': 28,
+    'russian': True,
+    'fav_food': ['суп', 'бутерброд']
+}
+
+print(type(Anton))  # <class 'dict'>
+print(Anton['age']) # 28
+print(Anton['fav_food']) # ['суп', 'бутерброд']
+
+Anton['developer'] = True # добвление в список
+print(Anton) # {'name': 'Anton', 'age': 28, 'russian': True, 'fav_food': ['суп', 'бутерброд'], 'developer': True}
+
+# тема 4.1
+# Функции
+
+# Куски кода которые мы можем использовать много кратно
+# Такая логика мы можем использовать много кратно
+
+age = "128"
+print(type(age)) # <class 'str'>
+age_2 = int(age)
+print(age_2, type(age_2)) # 128 <class 'int'>
+
+# тема 4.2
+# создаем функцию
+# Описываем функцию - definition
+def sayHello():
+    #Тело функции
+    print('Привет!')
+print('пока ')          #выведе вот так:
+                        #  пока
+sayHello()              #  Привет!
+sayHello()              #  Привет!
+
+
+
