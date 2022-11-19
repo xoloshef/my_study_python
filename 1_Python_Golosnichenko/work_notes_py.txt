@@ -117,21 +117,78 @@ def sayHello(name, age):
 hello = sayHello('Антон', '28')
 print(hello)
 #практическое 7 операций 
-
-
-
-
-
-
+"""
+#сделать ввод только числа и сделать 7 мат действий
 a, b = map(int, input().split())
 
+def math(a, b):
+    print(a + b)
+    print(a - b)
+    print(a * b)
+    print(a / b)
+    print(a % b)
+    print(-a)
+    return a ** b
+
+print(math(a, b))
+"""
+# условия
 def plus(a, b):
-    return a + b
 
-def pr(a, b):
-    return a + b
+    if type(b) is int or type(b) is float:
+        return a + b
+    else:
+        return None
+result = plus(2, 3)
+print(result)
 
-print(plus(a, b))
-print(pr(a, b))
+#пример
+def age_check(age):
+    print(f'Вам {age} лет')
+    if age < 18:
+        print('Вам нельзя пить')
+    elif age == 18:
+        print('Начните лучше с пива')
+    elif age > 20 and age < 25:
+        print('Может лучше сок')
+    else:
+        print('Вам можно пить, не перепейте')
+age_check(23)
 
 
+
+#for, in
+
+days = ['Пн', 'Вт', 'Ср', 'Чт',  'Пт']
+for x in days:
+    print(x)
+
+'''              модули
+ модуль это группа/часть каого-то функционала
+ просто import_math не целесобразно, надо:
+'''
+from math import ceil, fabs
+
+x = ceil(3.9)
+y = fabs(-2.31)
+print(x, y
+
+
+
+
+
+
+
+
+#           Внешние файлы
+# main.py
+from calculator import plus, minus
+
+print(plus(1, 2), minus(1, 2)) # 3 -1
+
+# calculator.py
+def plus(a, b):
+    return a+b
+
+def minus(a, b):
+    return a-b
